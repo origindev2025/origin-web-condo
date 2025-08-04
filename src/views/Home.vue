@@ -1,18 +1,28 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <Navbar />
+    <!-- <BannerSlider /> -->
+    <BannerGallery />
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Navbar from "@/components/Navbar.vue";
+// import BannerSlider from "@/components/BannerSlider.vue";
+import BannerGallery from "@/components/BannerGallery.vue";
+
 
 export default {
   name: "Home",
   components: {
-    HelloWorld,
+    Navbar,
+    // BannerSlider,
+    BannerGallery
   },
 };
 </script>
+<style scoped>
+.cta-area {
+  background-color: #f8f9fa;
+}
+</style>
