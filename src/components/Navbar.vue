@@ -25,17 +25,22 @@
         <div class="dropdown me-3 language-dropdown">
           <button class="btn dropdown-toggle d-flex align-items-center bg-transparent border-0 shadow-none" type="button"
             id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-            <img :src="getFlag($i18n.locale)" alt="Lang" width="24" class="rounded-circle me-2" />
+            <img :src="getFlag($i18n.locale)" alt="Lang" width="28" class="rounded-circle me-2" />
           </button>
           <ul class="dropdown-menu" aria-labelledby="langDropdown">
             <li>
               <a class="dropdown-item d-flex align-items-center" @click="setLang('th')">
-                <img src="@/assets/images/th-flag.png" width="24" class="rounded-circle me-2" /> TH
+                <img src="@/assets/images/th-flag.png" width="28" class="rounded-circle me-2" /> TH
               </a>
             </li>
             <li>
               <a class="dropdown-item d-flex align-items-center" @click="setLang('en')">
-                <img src="@/assets/images/en-flag.png" width="24" class="rounded-circle me-2" /> EN
+                <img src="@/assets/images/en-flag.png" width="28" class="rounded-circle me-2" /> EN
+              </a>
+            </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" @click="setLang('cn')">
+                <img src="@/assets/images/cn-flag.png" width="28" class="rounded-circle me-2" /> CN
               </a>
             </li>
           </ul>
@@ -132,6 +137,10 @@ nav.navbar.scrolled {
   border: var(--bs-border-width) solid rgb(244 243 243 / 0%);
   border-radius: var(--bs-navbar-toggler-border-radius);
   transition: var(--bs-navbar-toggler-transition);
+}
+
+.language-dropdown .dropdown-item {
+  cursor: pointer;
 }
 </style>
 

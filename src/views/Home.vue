@@ -1,5 +1,7 @@
 <template>
   <div class="home">
+    
+
     <!-- มือถือ -->
     <div class="d-block d-lg-none">
       <MobileNavbar />
@@ -11,6 +13,9 @@
       <Navbar />
       <BannerGallery />
     </div>
+
+    <!-- Search: แสดงทั้งมือถือและเดสก์ท็อป -->
+    <Search />
   </div>
 </template>
 
@@ -19,6 +24,7 @@ import Navbar from "@/components/Navbar.vue";
 import MobileNavbar from "@/components/MobileNavbar.vue";
 import BannerSlider from "@/components/BannerSlider.vue";
 import BannerGallery from "@/components/BannerGallery.vue";
+import Search from "@/components/Search.vue"; // 👈 นำเข้า Search
 
 export default {
   name: "Home",
@@ -26,13 +32,8 @@ export default {
     Navbar,
     MobileNavbar,
     BannerSlider,
-    BannerGallery
+    BannerGallery,
+    Search // 👈 เพิ่มเข้า components
   },
 };
 </script>
-
-<style scoped>
-.cta-area {
-  background-color: #f8f9fa;
-}
-</style>
