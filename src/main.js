@@ -4,6 +4,7 @@ import router from "./router";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap";
 import "@/assets/style.scss";
+import 'bootstrap-icons/font/bootstrap-icons.css'
 
 // ✅ ใช้ Swiper 4.x ที่ vue-awesome-swiper@3.1.3 รองรับ
 import 'swiper/dist/css/swiper.min.css';

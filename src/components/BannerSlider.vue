@@ -23,13 +23,13 @@
       return {
         slides: [
           {
-            image: require("@/assets/images/pet-banner1.jpg"),
+            image: require("@/assets/images/mb-pet-banner1.jpg"),
           },
           {
-            image: require("@/assets/images/pet-banner2.jpg"),
+            image: require("@/assets/images/mb-pet-banner2.jpg"),
           },
           {
-            image: require("@/assets/images/pet-banner3.jpg"),
+            image: require("@/assets/images/mb-pet-banner3.jpg"),
           },
         ],
         swiperOptions: {

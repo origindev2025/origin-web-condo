@@ -65,7 +65,7 @@ export default {
             },
             thumbSwiperOptions: {
                 slidesPerView: 3,
-                spaceBetween: 5,
+                spaceBetween: 15,
             },
         };
     },
@@ -154,6 +154,9 @@ export default {
     /* ✅ เปลี่ยนสีลูกศรที่เป็น pseudo-element */
     font-size: 20px;
     /* ปรับขนาดตามต้องการ */
+}
+.swiper-slide {
+  background-color: transparent;
 }
 </style>
   
