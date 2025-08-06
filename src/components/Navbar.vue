@@ -25,22 +25,22 @@
         <div class="dropdown me-3 language-dropdown">
           <button class="btn dropdown-toggle d-flex align-items-center bg-transparent border-0 shadow-none" type="button"
             id="langDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-            <img :src="getFlag($i18n.locale)" alt="Lang" width="28" class="rounded-circle me-2" />
+            <img :src="getFlag($i18n.locale)" alt="Lang" width="25" class="rounded-circle me-2" />
           </button>
           <ul class="dropdown-menu" aria-labelledby="langDropdown">
             <li>
               <a class="dropdown-item d-flex align-items-center" @click="setLang('th')">
-                <img src="@/assets/images/th-flag.png" width="28" class="rounded-circle me-2" /> TH
+                <img src="@/assets/images/th-flag.png" width="25" class="rounded-circle me-2" /> TH
               </a>
             </li>
             <li>
               <a class="dropdown-item d-flex align-items-center" @click="setLang('en')">
-                <img src="@/assets/images/en-flag.png" width="28" class="rounded-circle me-2" /> EN
+                <img src="@/assets/images/en-flag.png" width="25" class="rounded-circle me-2" /> EN
               </a>
             </li>
             <li>
               <a class="dropdown-item d-flex align-items-center" @click="setLang('cn')">
-                <img src="@/assets/images/cn-flag.png" width="28" class="rounded-circle me-2" /> CN
+                <img src="@/assets/images/cn-flag.png" width="25" class="rounded-circle me-2" /> CN
               </a>
             </li>
           </ul>
@@ -79,9 +79,6 @@ export default {
       const navbar = document.querySelector(".navbar");
       const navbarHeight = navbar?.getBoundingClientRect().height || 66;
 
-      console.log("🔍 Navbar height:", navbarHeight); // ← ตรวจดูว่าค่าถูกต้องไหม
-      console.log("📦 Setting padding-top to .page-wrapper");
-
       if (this.$refs.pageWrapper) {
         this.$refs.pageWrapper.style.paddingTop = `${navbarHeight}px`;
       } else {
@@ -89,7 +86,6 @@ export default {
       }
     },
     handleScroll() {
-      console.log(window.scrollY)
       this.isScrolled = window.scrollY > 20;
     },
     setLang(lang) {

@@ -72,20 +72,13 @@ export default {
     mounted() {
         this.$nextTick(() => {
             const mainSwiper = this.$refs.mainSwiper?.swiper;
-            if (mainSwiper) {
-                console.log("✅ Main Swiper ready in mounted():", mainSwiper);
-            } else {
-                console.warn("⛔ Main Swiper still not ready in mounted()");
-            }
         });
     },
     methods: {
         onMainSwiperReady(swiper) {
-            console.log("✅ Swiper ready:", swiper);
             this.mainSwiperInstance = swiper;
         },
         goToSlide(index) {
-            console.log("👉 goToSlide called with index:", index);
             if (this.mainSwiperInstance) {
                 this.mainSwiperInstance.slideTo(index);
             } else {

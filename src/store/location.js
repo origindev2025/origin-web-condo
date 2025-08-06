@@ -1,5 +1,5 @@
-import { GET_DATA_BRAND } from "./actions.type";
-import { brand } from "@/service/brand";
+import { GET_DATA_LOCATION } from "./actions.type";
+import { location } from "@/service/location";
 
 function initState() {
     return {}
@@ -8,8 +8,8 @@ function initState() {
 const state = initState();
 
 const actions = {
-    async [GET_DATA_BRAND](_, lang) {
-        const response = await brand.getDataBrand(lang);
+    async [GET_DATA_LOCATION](_, lang) {
+        const response = await location.getDataLocation(lang);
         return response;
     }
 };

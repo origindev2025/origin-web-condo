@@ -22,6 +22,11 @@ const routes = [
         component: () =>
           import(/* webpackChunkName: "about" */ "../views/About.vue"),
       },
+      {
+        path: ':slug',
+        name: 'ProjectTypeRouter',
+        component: () => import('@/views/ProjectType/ProjectTypeRouter.vue')
+      }
     ],
   },
   // หากไม่มีภาษา → redirect ไป th

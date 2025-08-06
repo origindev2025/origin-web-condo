@@ -14,8 +14,13 @@
       <BannerGallery />
     </div>
 
-    <!-- Search: แสดงทั้งมือถือและเดสก์ท็อป -->
+    <!-- ค้นหาโครงการที่ใช่ ทำเลดี -->
     <Search />
+
+    <Recommend />
+
+    <router-link to="/th/project/ready">ทดสอบลิงก์</router-link>
+
   </div>
 </template>
 
@@ -24,7 +29,9 @@ import Navbar from "@/components/Navbar.vue";
 import MobileNavbar from "@/components/MobileNavbar.vue";
 import BannerSlider from "@/components/BannerSlider.vue";
 import BannerGallery from "@/components/BannerGallery.vue";
-import Search from "@/components/Search.vue"; // 👈 นำเข้า Search
+import Search from "@/components/Search.vue";
+import Recommend from "@/components/Recommend.vue";
+
 
 export default {
   name: "Home",
@@ -33,7 +40,8 @@ export default {
     MobileNavbar,
     BannerSlider,
     BannerGallery,
-    Search // 👈 เพิ่มเข้า components
+    Search,
+    Recommend
   },
 };
 </script>
