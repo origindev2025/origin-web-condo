@@ -16,11 +16,8 @@
 
     <!-- ค้นหาโครงการที่ใช่ ทำเลดี -->
     <Search />
-
     <Recommend />
-
-    <router-link to="/th/project/ready">ทดสอบลิงก์</router-link>
-
+    <FilterRecommend />
   </div>
 </template>
 
@@ -31,7 +28,7 @@ import BannerSlider from "@/components/BannerSlider.vue";
 import BannerGallery from "@/components/BannerGallery.vue";
 import Search from "@/components/Search.vue";
 import Recommend from "@/components/Recommend.vue";
-
+import FilterRecommend from "@/components/FilterRecommend.vue";
 
 export default {
   name: "Home",
@@ -41,7 +38,8 @@ export default {
     BannerSlider,
     BannerGallery,
     Search,
-    Recommend
+    Recommend,
+    FilterRecommend
   },
 };
 </script>

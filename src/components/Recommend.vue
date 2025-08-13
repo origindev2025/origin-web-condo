@@ -13,8 +13,8 @@
             </div>
 
             <!-- RIGHT -->
-            <div class="col-lg-6 mt-lg-0 d-flex flex-column justify-content-between h-100 bg-light rounded-end pt-3">
-                <div class="position-relative ps-4 mb-2">
+            <div class="col-lg-6 mt-lg-0 d-flex flex-column justify-content-between h-100 bg-light rounded-end pt-4">
+                <div class="position-relative ps-4 mb-3">
                     <span class="highlight-line"></span>
                     <h2 class="text-orange fw-bold mt-2">{{ $t('besideYou.right.highlight') }}</h2>
 
@@ -45,8 +45,6 @@
                                 <h6 class="text-white fw-bold w-100 text-center">{{ item.name }}</h6>
                             </div>
                         </router-link>
-
-
                     </div>
                 </div>
             </div>
@@ -140,7 +138,7 @@ export default {
 
 .project-card {
     width: 160px;
-    height: 220px;
+    height: 100%;
     flex: 0 0 auto;
     /* สำคัญมาก: ห้ามยืด-หด */
     overflow: hidden;
