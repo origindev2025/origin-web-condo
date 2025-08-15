@@ -14,12 +14,11 @@
       </button>
     </div>
 
-
     <div class="scrolling-wrapper d-flex flex-nowrap overflow-auto pt-2">
       <div v-for="project in filteredProjects" :key="project.id" class="project-card text-white me-3 flex-shrink-0">
         <div class="image-wrapper position-relative">
           <img :src="project.thumbnail_url" class="card-img" :alt="project.project_name" />
-          <span class="badge badge-overlay bg-primary">
+          <span class="badge badge-overlay" :class="getTypeColor(selectedType)">
             {{ $t('besideYou.projects.' + selectedType) }}
           </span>
         </div>
@@ -30,7 +29,9 @@
           <p class="mb-0 small">{{ $t('besideYou.startPrice') }}</p>
 
           <div class="d-flex align-items-end">
-            <h3 class="mb-0 me-1 fw-bold">{{ formatPrice(project.price_min) }}</h3>
+            <h3 class="mb-0 me-1 fw-bold">
+              {{ formatPrice(project.price_min) }}
+            </h3>
             <span class="small">{{ $t('besideYou.unit') }}</span>
           </div>
         </div>
@@ -54,14 +55,15 @@ export default {
       selectedType: "ready",
       allProjects: [],
       projectTypes: [
-        { slug: "ready", label: "besideYou.projects.ready" },
-        { slug: "new", label: "besideYou.projects.new" },
-        { slug: "pet_friendly", label: "besideYou.projects.pet" },
-        { slug: "near_bts", label: "besideYou.projects.bts" },
+        { slug: "ready", label: "besideYou.projects.ready", color: "badge-ready" },
+        { slug: "new", label: "besideYou.projects.new", color: "badge-new" },
+        { slug: "pet_friendly", label: "besideYou.projects.pet", color: "badge-pet" },
+        { slug: "near_bts", label: "besideYou.projects.bts", color: "badge-bts" },
       ],
     };
   },
   computed: {
+
     filteredProjects() {
       return this.allProjects[this.selectedType] || [];
     },
@@ -70,13 +72,17 @@ export default {
     await this.fetchProjects(this.$i18n.locale);
   },
   watch: {
-    '$i18n.locale'(newLang) {
+    "$i18n.locale"(newLang) {
       this.fetchProjects(newLang);
-    }
+    },
   },
   methods: {
     selectType(type) {
       this.selectedType = type;
+    },
+    getTypeColor(typeSlug) {
+      const type = this.projectTypes.find((t) => t.slug === typeSlug);
+      return type ? type.color : "";
     },
     async fetchProjects(lang) {
       try {
@@ -90,17 +96,40 @@ export default {
     },
     formatPrice(val) {
       if (!val || isNaN(val)) return "-";
-      const millionValue = parseFloat(val) >= 1000000 ? parseFloat(val) / 1000000 : parseFloat(val);
+      const millionValue =
+        parseFloat(val) >= 1000000
+          ? parseFloat(val) / 1000000
+          : parseFloat(val);
       return millionValue.toLocaleString(undefined, {
         minimumFractionDigits: 2,
         maximumFractionDigits: 2,
       });
-    }
+    },
   },
 };
 </script>
 
+
 <style scoped>
+.badge-ready {
+  background-color: #008d72; 
+  color: #fff;
+}
+
+.badge-new {
+  background-color: #e87d2f; 
+  color: #fff;
+}
+
+.badge-pet {
+  background-color: #008d72; 
+  color: #fff;
+}
+
+.badge-bts {
+  background-color: #e87d2f; 
+  color: #fff;
+}
 .recommend-projects .btn-orange {
   background-color: #ff6600;
   color: white;

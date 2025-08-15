@@ -54,6 +54,18 @@ export default {
     startPrice: "Starting from",
     unit: "MB"
   },
+  LocaleShowcase: {
+    hero: {
+      title: "Great Locations <span class='accent'>Prime Spots</span>",
+      subtitle: "Attractive locations across Bangkok, the metropolitan area, and upcountry.",
+      desc: "No matter your lifestyle, every area and every zone covers all your convenient travel needs",
+      desc_2: "…… Origin has every lifestyle you desire.",
+      cta: "View All Locations"
+    },
+    accordion: {
+      seeAll: "See All"
+    }
+  }
 
 
 };

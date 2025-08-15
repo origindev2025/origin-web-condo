@@ -53,5 +53,17 @@ export default {
     },
     startPrice: "起价",
     unit: "百万泰铢"
+  },
+  LocaleShowcase: {
+    hero: {
+      title: "优越地段 <span class='accent'>黄金位置</span>",
+      subtitle: "遍布曼谷、大都会区及外省的理想居住地",
+      desc: "无论您的生活方式如何，每个地区、每个区域都能满足您方便快捷的出行需求…… Origin 为您提供所有理想的生活方式。",
+      desc_2: "…… Origin 为您提供所有理想的生活方式。",
+      cta: "查看全部地段"
+    },
+    accordion: {
+      seeAll: "查看全部"
+    }
   }
 };

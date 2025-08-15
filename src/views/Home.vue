@@ -18,6 +18,7 @@
     <Search />
     <Recommend />
     <FilterRecommend />
+    <LocaleShowcase />
   </div>
 </template>
 
@@ -29,6 +30,8 @@ import BannerGallery from "@/components/BannerGallery.vue";
 import Search from "@/components/Search.vue";
 import Recommend from "@/components/Recommend.vue";
 import FilterRecommend from "@/components/FilterRecommend.vue";
+import LocaleShowcase from "@/components/LocaleShowcase.vue";
+
 
 export default {
   name: "Home",
@@ -39,7 +42,8 @@ export default {
     BannerGallery,
     Search,
     Recommend,
-    FilterRecommend
+    FilterRecommend,
+    LocaleShowcase
   },
 };
 </script>

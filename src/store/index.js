@@ -5,13 +5,14 @@ Vue.use(Vuex);
 import brand from './brand.js'
 import location from './location';
 import project_recommend from './project_recommend';
-
+import area from './area';
 
 
 export default new Vuex.Store({
     modules: {
         brand,
         location,
-        project_recommend
+        project_recommend,
+        area
     }
 })
